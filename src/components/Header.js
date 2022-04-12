@@ -37,14 +37,11 @@ const Header = () => {
         </div>
 
         <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-          <div onClick={!session ? signIn : signOut} className="link">
-            <p>Hello, {session ? `${session.user.name}` : "Sign In"}</p>
-            <p className="font-extrabold md:text-sm">Account & Lists</p>
-          </div>
+          
 
           <div className="link" onClick={() => router.push("/orders")}>
-            <p>Returns</p>
-            <p className="font-extrabold md:text-sm">& Orders</p>
+            
+            
           </div>
 
           <div
@@ -52,11 +49,11 @@ const Header = () => {
             className="relative link flex items-center"
           >
             <span className="absolute top-0 right-0 md:right-7 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
-              {items.length}
+    
             </span>
-            <ShoppingCartIcon className="h-10" />
+           
             <p className="hidden md:inline font-extrabold md:text-sm mt-2">
-              Cart
+              
             </p>
           </div>
         </div>
@@ -68,7 +65,7 @@ const Header = () => {
         </p>
        
         <p className="link">New App</p>
-        <p className="link">Today's News</p>
+        <a href="/displayWeather"><p className="link ">Today's Weather</p></a>
         <p className="link hidden lg:inline-flex">Local News</p>
         <p className="link hidden lg:inline-flex">Global News</p>
         <p className="link hidden lg:inline-flex">Sports</p>

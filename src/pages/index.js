@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
-import ProductFeed from "../components/ProductFeed";
-import { useSession } from "next-auth/client";
+import DisplayNews from "../components/DisplayNews";
+
 import Footer from "../components/Footer";
 import { getNews } from "../../api/newService";
 import { useState } from "react";
@@ -37,7 +37,7 @@ export default function Home() {
         <Banner />
 
         {/* ----Products feed ---- */}
-        <ProductFeed products={ newsFeed } />
+        <DisplayNews products={ newsFeed } />
 
         {/**Footer */}
         <Footer />
@@ -49,17 +49,4 @@ export default function Home() {
 }
 
 
-//https://fakestoreapi.com/products
-// const data = JSON.parse(JSON.stringify(request))
 
-// export async function getServerSideProps(context) {
-//   const products = await fetch("https://fakestoreapi.com/products").then(
-//     (res) => res.json
-//   );
-
-//   return {
-//     props: {
-//       products,
-//     },
-//   };
-// }
